@@ -27,6 +27,12 @@ def get_filters():
     return city, month, day
 
 def show_raw_data(df):
+    """
+    Give user the option to view the raw data, 5 rows at a time.
+
+    Args:
+        (DataFrame) df - Pandas DataFrame containing city data.
+    """
     row_index = 0
     should_show_data = get_input("Would you like to see 5 rows of raw data?", ['yes', 'no'], default='no')
     while should_show_data == 'yes' and row_index < len(df):
