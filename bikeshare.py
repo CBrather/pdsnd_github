@@ -35,6 +35,16 @@ def show_raw_data(df):
         should_show_data = get_input("Would you like to see 5 more rows of raw data?", ['yes', 'no'], default='no')
 
 def get_input(prompt, valid_options, default=''):
+    """
+    Asks user to provide input and validates it against a list of valid options.
+    
+    Args:
+        (str) prompt - The prompt to display to the user
+        (list) valid_options - A list of options to validate user input against
+        (str) default - The default value to use if the user provides no input. If left empty, null input will be considered invalid.
+    Returns:
+        (str) user_input - The validated user input or default value
+    """
     composed_prompt = f"{prompt} ({', '.join(valid_options)}"
     if default:
         valid_options = valid_options + ['']
