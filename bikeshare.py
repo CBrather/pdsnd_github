@@ -188,7 +188,7 @@ def main():
 
         show_raw_data(df)
   
-        restart = get_input('\nWould you like to restart? Enter yes or no.\n', ['yes', 'no'], default='no')
+        restart = get_input('\nWould you like to restart?', ['yes', 'no'], default='no')
         if restart!= 'yes':
             break
 
