@@ -5,10 +5,9 @@ Jan 1st, 2026
 Introduction to Git - Project Submission
 
 ### Description
-Describe what your project is about and what it does
+This project consists of a python command line script for interacively exploring bike sharing data from Chicago, New York City and Washington.
 
-### Files used
-Include the files used
+It provides a set of statistics, which can be filtered by month and week day.
 
 ### Credits
 - Forked from https://github.com/udacity/pdsnd_github.
