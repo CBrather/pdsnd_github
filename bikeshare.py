@@ -94,7 +94,6 @@ def load_data(city, month, day):
 
     return df
 
-
 def time_stats(df):
     """Displays statistics on the most frequent times of travel."""
 
@@ -197,14 +196,18 @@ def main():
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
-        time_stats(df)
-        station_stats(df)
-        trip_duration_stats(df)
-        user_stats(df)
+        if df.empty:
+            print("No data available for the selected filters.")
 
-        show_raw_data(df)
+        else:
+            time_stats(df)
+            station_stats(df)
+            trip_duration_stats(df)
+            user_stats(df)
+
+            show_raw_data(df)
   
-        restart = get_input('\nWould you like to restart? Enter yes or no.\n', ['yes', 'no'], default='no')
+        restart = get_input('\nWould you like to restart?', ['yes', 'no'], default='no')
         if restart!= 'yes':
             break
 
